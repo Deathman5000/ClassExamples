@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ra412063.tbill.TBillActivity">
+    <!-- row 1 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+     <TextView
+         android:layout_width="200dp"
+         android:layout_marginLeft="10dp"
+         android:textStyle="bold"
+         android:text="Face Value"
+         android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/faceValue"
+            android:inputType="number"
+            />
+    </LinearLayout>
+
+    <!-- row 2 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        >
+        <TextView
+            android:layout_width="200dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:text="Year (0.25, 0.5, 0.75, 1)"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/timePeriod"
+            android:inputType="numberDecimal"
+            />
+    </LinearLayout>
+
+    <!-- row 3 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        >
+        <TextView
+            android:layout_width="200dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:text="Yield"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/yield"
+            android:inputType="numberDecimal"
+            />
+    </LinearLayout>
+
+    <!-- row 4 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="90dp"
+        >
+        <TextView
+            android:layout_width="200dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:text="Market Value"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/marketValue"
+            android:inputType="number"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMPUTE"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/computeButton"/>
+
+</RelativeLayout>
