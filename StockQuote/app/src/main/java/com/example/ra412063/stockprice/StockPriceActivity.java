@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +31,7 @@ public class StockPriceActivity extends AppCompatActivity {
 
    EditText symbol;
     TextView price;
+    Button compute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,16 @@ public class StockPriceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stock_price);
         symbol =(EditText)findViewById(R.id.editText);
         price = (TextView)findViewById(R.id.textView2);
+        compute = findViewById(R.id.button);
+        compute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String st = symbol.getText().toString();
+                st = "https://query1.finance.yahoo.com/v8/finance/chart/"+st+"?interval=2m";
+                Log.i("UIThread", st);
+                new FindPrice().execute(st);
+            }
+        });
     }
     /*
        An alternate to setting a click listener on the button using setOnClickListener(View.OnClickListener) is
@@ -44,7 +56,8 @@ public class StockPriceActivity extends AppCompatActivity {
        implement a void function for the attribute name telling what action to take when the button is
        clicked.
      */
-    protected void compute(View view){
+
+ /*   protected void compute(View view){
 
         String st = symbol.getText().toString();
         st = "https://query1.finance.yahoo.com/v8/finance/chart/"+st+"?interval=2m";
@@ -52,7 +65,7 @@ public class StockPriceActivity extends AppCompatActivity {
         new FindPrice().execute(st);
 
 
-    }
+    }*/
     /*
         FindPrice has three template types in general. The first type is used to specify the type
         for the parameter passed at the time of invoking execute() method to the doInBackground() method, the second type is
