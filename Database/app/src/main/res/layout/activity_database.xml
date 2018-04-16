@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ra412063.databaseapp.DatabaseActivity">
+    <!-- row 1 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="15sp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:text="Product ID"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="not_assigned"
+            android:ems="10"
+            android:id="@+id/ProductID"
+            />
+    </LinearLayout>
+    <!-- row 2 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="15sp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textStyle="bold"
+            android:inputType="text"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:ems="10"
+            android:id="@+id/product_name"/>
+
+
+    </LinearLayout>
+
+    <!-- row 3 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="15sp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:text="Product Quantity"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:ems="10"
+            android:inputType="number"
+            android:id="@+id/product_qty"
+            />
+    </LinearLayout>
+
+    <!-- button row 1 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="15sp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:onClick="newProduct"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find"
+            android:onClick="findProduct"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:onClick="removeProduct"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show All"
+            android:onClick="showAll"
+            />
+    </LinearLayout>
+    <!-- button row 2 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="15sp"
+        android:onClick="reset"/>
+    <!-- display table -->
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="15sp"
+        android:orientation="vertical"
+        android:id="@+id/list_item" />
+
+
+</LinearLayout>
