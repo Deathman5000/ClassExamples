@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ra412063.databaseproviderapp.DatabaseProviderActivity">
+
+    <!-- row 1 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"
+        >
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Product ID"/>
+        <TextView
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/productID"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="not-assigned"/>
+
+    </LinearLayout>
+
+    <!-- row 2 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"
+        >
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Product Name"/>
+        <EditText
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/productName"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:ems="10"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <!-- row 3 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"
+        >
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Product Quantity"/>
+        <EditText
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/productQuantity"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:ems="10"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <!-- row 4 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        >
+
+        <Button
+            android:layout_width="75sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:text="Add"
+            android:onClick="newProduct"/>
+        <Button
+            android:layout_width="75sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:text="Find"
+            android:onClick="lookupProduct"/>
+        <Button
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:text="Delete"
+            android:onClick="removeProduct"/>
+        <Button
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:text="Show All"
+            android:onClick="show"/>
+
+    </LinearLayout>
+
+</LinearLayout>
