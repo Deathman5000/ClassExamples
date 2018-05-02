@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10sp"
+    android:layout_marginLeft="10sp"
+    android:orientation="vertical"
+    tools:context="com.example.jh949711.internetapp.InternetActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:text="Start the browser with a click below"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <TextView
+        android:layout_marginTop="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginLeft="10sp"
+        android:text="Google"
+        android:clickable="true"
+        android:onClick="google"
+        android:textColor="@android:color/holo_green_light"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginLeft="10sp"
+        android:text="My University"
+        android:clickable="true"
+        android:onClick="wtamu"
+        android:textColor="@android:color/holo_red_dark"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginLeft="10sp"
+        android:text="MSN News"
+        android:clickable="true"
+        android:onClick="msn"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+</LinearLayout>
